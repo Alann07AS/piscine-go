@@ -1,1 +1,1 @@
-echo "R"
+cat
