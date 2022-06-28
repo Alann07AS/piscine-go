@@ -1,0 +1,1 @@
+ls -R | awk '!(NR % 2) {print}'
