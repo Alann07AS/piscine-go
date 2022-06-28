@@ -1,1 +1,1 @@
-. | wc -l
+find . | wc -l
