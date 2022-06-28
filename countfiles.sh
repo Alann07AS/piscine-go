@@ -1,1 +1,1 @@
-ls | wc -l | awk {'print $1 +1'}
+. | wc -l
