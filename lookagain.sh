@@ -1,1 +1,1 @@
-find . -name '*.sh'   |sort -r  | cut  -f 2 --delimiter="." | cut -f 2 --delimiter="/" | cut -f 2 --delimiter="/"
+find . -name '*.sh'   |sort -r  | cut  -f 2 --delimiter="." | sed 's#./##g'
