@@ -1,1 +1,1 @@
-find . -name '*.sh' | sed 's/.sh//g'  |sort -r |  cut  -f 2 --delimiter="/f"
+find . -name '*.sh'   |sort -r  | cut  -f 2 --delimiter="." | cut -f 2 --delimiter="/" | cut -f 2 --delimiter="/"
