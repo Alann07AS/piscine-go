@@ -21,7 +21,7 @@ func PrintComb() {
 				toPrint2 = (1 + toPrint2)
 				toPrint3 = (toPrint2 + 1)
 			} else {
-				if int(toPrint1) < int(toPrint3) && int(toPrint2) < int(toPrint3)) {
+				if int(toPrint1) < int(toPrint3) && int(toPrint2) < int(toPrint3) {
 					toPrint3++
 				}
 			}
