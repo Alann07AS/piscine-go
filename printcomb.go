@@ -7,7 +7,7 @@ func PrintComb() {
 		for n2 := 1; n2 != 9; n2++ {
 			for n3 := 2; n3 != 10; n3++ {
 				if n1 < n2 && n2 < n3 {
-					if n1 != 7 && n2 != 8 && n3 != 9{
+					if n1 != 7 && n2 != 8 && n3 != 9 {
 						z01.PrintRune(rune(n1 + 48))
 						z01.PrintRune(rune(n2 + 48))
 						z01.PrintRune(rune(n3 + 48))
