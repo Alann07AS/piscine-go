@@ -4,7 +4,7 @@ import "github.com/01-edu/z01"
 
 func PrintComb() {
 	const c0, c1, c2, c8, c9 = 0x30, 0x31, 0x32, 0x38, 0x39
-	var := 0
+	end := 0
 	var toPrint1, toPrint2, toPrint3 rune = 0x30, 0x30, 0x30
 	toPrint1 = 0x30
 	toPrint2 = 0x31
