@@ -3,8 +3,8 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintComb() {
-	for n1 := 0; n1 != 8; n1++{
-		for n2 := 1; n2 != 9; n2++{
+	for n1 := 0; n1 != 8; n1++ {
+		for n2 := 1; n2 != 9; n2++ {
 			for n3 := 2; n3 != 10; n3++ {
 				if n1 < n2 && n2 < n3 {
 					z01.PrintRune(rune(n1 + 48))
