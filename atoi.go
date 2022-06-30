@@ -10,7 +10,7 @@ func Atoi(s string) int {
 	for i := 0; i <= lenth; i++ {
 		if !(b[i] >= '0' && b[i] <= '9') {
 			valid = false
-			if i == 0 && (b[0] == '+' || b[0] == '-'){
+			if i == 0 && (b[0] == '+' || b[0] == '-') {
 				valid = true
 				loop = 1
 			}
