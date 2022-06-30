@@ -9,5 +9,5 @@ func StrLen(s string) int {
 		}
 	}
 
-	return len(b)-c
+	return len(b) - c
 }
