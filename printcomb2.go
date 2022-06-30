@@ -10,7 +10,7 @@ func PrintComb2() {
 		d2 = rune((c/100)%10 + z)
 		d3 = rune((c/10)%10 + z)
 		d4 = rune(c%10 + z)
-		if int(d1)+int(d2)-z*2 < int(d3)+int(d4)-z*2 {
+		if int((d1)-z)*10+int(d2)-z < int((d3)-z)*10+int(d4)-z {
 			z01.PrintRune(d1)
 			z01.PrintRune(d2)
 			z01.PrintRune(' ')
