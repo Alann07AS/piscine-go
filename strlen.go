@@ -1,7 +1,12 @@
 package piscine
 
-import "unicode/utf8"
-
 func StrLen(s string) int {
-	return utf8.RuneCountInString(s)
+	b := []byte(s)
+	for i := 0; len(b) > i; i++ {
+		if b[i] > 126 {
+			b[i] = 'O'
+		}
+	}
+
+	return len(b)
 }
