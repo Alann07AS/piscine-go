@@ -13,6 +13,7 @@ func Atoi(s string) int {
 			if i == 0 && (b[0] == '+' || b[0] == '-') {
 				valid = true
 				loop = 1
+				wlenth -= 1
 			}
 		}
 	}
