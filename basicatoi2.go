@@ -7,7 +7,7 @@ func BasicAtoi2(s string) int {
 	var ans, weight int = 0, 1
 	valid := true
 	for i := 0; i <= lenth; i++ {
-		if !(b[0] >= '0' && b[0] <= '9') {
+		if !(b[i] >= '0' && b[i] <= '9') {
 			valid = false
 		}
 	}
