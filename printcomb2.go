@@ -10,14 +10,16 @@ func PrintComb2() {
 		d2 = rune((c/100)%10 + z)
 		d3 = rune((c/10)%10 + z)
 		d4 = rune(c%10 + z)
-		z01.PrintRune(d1)
-		z01.PrintRune(d2)
-		z01.PrintRune(' ')
-		z01.PrintRune(d3)
-		z01.PrintRune(d4)
-		if !(int(d1)-z == 9 && int(d2)-z == 8 && int(d3)-z == 9 && int(d4)-z == 9) {
-			z01.PrintRune(',')
+		if int(d1)-z != int(d3)-z && int(d2)-z != int(d4)-z {
+			z01.PrintRune(d1)
+			z01.PrintRune(d2)
 			z01.PrintRune(' ')
+			z01.PrintRune(d3)
+			z01.PrintRune(d4)
+			if !(int(d1)-z == 9 && int(d2)-z == 8 && int(d3)-z == 9 && int(d4)-z == 9) {
+				z01.PrintRune(',')
+				z01.PrintRune(' ')
+			}
 		}
 	}
 }
