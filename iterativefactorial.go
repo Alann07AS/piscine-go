@@ -6,6 +6,8 @@ func IterativeFactorial(nb int) int {
 		for i := 1; i <= nb; i++ {
 			result *= i
 		}
+		return result
+	} else {
+		return 0
 	}
-	return result
 }
