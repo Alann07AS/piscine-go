@@ -1,12 +1,8 @@
 package piscine
 
-import "fmt"
-
 func FindNextPrime(nb int) int {
 	for i := nb; i < nb+100; i++ {
-		fmt.Println("Valeur i ", i)
 		if isPrime(i) {
-			fmt.Println("La valeur est", i)
 			return i
 		}
 	}
