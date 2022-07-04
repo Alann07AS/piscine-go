@@ -1,9 +1,12 @@
 package piscine
 
+import "fmt"
+
 func FindNextPrime(nb int) int {
-	state := false
-	for i := nb; state == false; i++ {
+	for i := nb; i < nb+100; i++ {
+		fmt.Println("Valeur i ", i)
 		if isPrime(i) {
+			fmt.Println("La valeur est", i)
 			return i
 		}
 	}
@@ -27,11 +30,16 @@ func isPrime(nb int) bool {
 		return true
 	}
 	state := true
-	for i := 2; i < nb/2; i++ {
+	if nb%2 == 0 {
+		return false
+	}
+	i := 2
+	for i <= nb/4 && state == true {
 		modulo := nb % i
 		if modulo == 0 && i != nb {
 			state = false
 		}
+		i += 1
 	}
 	return state
 }
