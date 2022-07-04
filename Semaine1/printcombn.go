@@ -1,10 +1,10 @@
 package piscine
 
 import "github.com/01-edu/z01"
-import "fmt"
+// import "fmt"
 
 func PrintCombN(n int) {
-	fmt.Println("INIT")
+	// fmt.Println("INIT")
 	comb := 0
 	if n == 9 {
 		comb = 12345678
@@ -19,13 +19,13 @@ func PrintCombN(n int) {
 		if comb == lastComb {
 			Pcomb(comb, n)
 			z01.PrintRune('\n')
-			fmt.Println("Is Last Comb")
+			// fmt.Println("Is Last Comb")
 			break
 		}
 		if comb%10000000 == 3456789 {
-			comb+= 10000000
+			comb += 10000000
 		} else {
-		comb++
+			comb++
 		}
 	}
 }
@@ -33,11 +33,11 @@ func PrintCombN(n int) {
 func LastComb(n int) int {
 	lastComb := 9
 	weight := 10
-	for i:=1; i < n; i++ {
-		lastComb = lastComb + ((9 - i)* weight)
+	for i := 1; i < n; i++ {
+		lastComb = lastComb + ((9 - i) * weight)
 		weight *= 10
 	}
-	fmt.Println("Lastcomb is ", lastComb)
+	// fmt.Println("Lastcomb is ", lastComb)
 	return lastComb
 }
 
@@ -61,9 +61,9 @@ func IntToString(nb int, n int) string {
 		weight *= 10
 	}
 	for i2 := 0; i2 <= n ; i2++ {
-		table[i2] = byte((nb / weight)%10 + '0')
+		table[i2] = byte((nb/weight)%10 + '0')
 		if weight != 1 {
-		weight /= 10
+			weight /= 10
 		}
 	}
 	return string(table)
@@ -72,7 +72,7 @@ func IntToString(nb int, n int) string {
 func Pcomb(comb, n int) {
 	stringComb := IntToString(comb, n)
 	tableComb := []byte(stringComb)
-	for i2 := 0; i2 <= n - 1; i2++ {
-	z01.PrintRune(rune(tableComb[i2]))
+	for i2 := 0; i2 <= n-1; i2++ {
+		z01.PrintRune(rune(tableComb[i2]))
 	}
 }
