@@ -1,6 +1,7 @@
 package piscine
 
 func FindNextPrime(nb int) int {
+	if nb > 1000000 { }
 	state := false
 	for i := nb; state == false; i++ {
 		if isPrime(i) {
@@ -27,7 +28,7 @@ func isPrime(nb int) bool {
 		return true
 	}
 	state := true
-	for i := 2; i < nb; i++ {
+	for i := 2; i < nb/2; i++ {
 		modulo := nb % i
 		if modulo == 0 && i != nb {
 			state = false
