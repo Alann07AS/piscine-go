@@ -32,8 +32,12 @@ func isPrime(nb int) bool {
 	if nb%2 == 0 {
 		return false
 	}
+	div := 1
+	if nb > 100000 {
+		div = 4
+	}
 	i := 2
-	for i <= nb/4 && state == true {
+	for i <= nb/div && state == true {
 		modulo := nb % i
 		if modulo == 0 && i != nb {
 			state = false
