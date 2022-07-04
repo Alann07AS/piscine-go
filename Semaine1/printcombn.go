@@ -1,6 +1,7 @@
 package piscine
 
 import "github.com/01-edu/z01"
+
 // import "fmt"
 
 func PrintCombN(n int) {
@@ -45,7 +46,7 @@ func combIs(comb, n int) bool {
 	stringComb := IntToString(comb, n)
 	tableComb := []byte(stringComb)
 	state := true
-	for i := 0; i < n - 1; i++ {
+	for i := 0; i < n-1; i++ {
 		if tableComb[i] >= tableComb[i+1] {
 			state = false
 		}
@@ -60,7 +61,7 @@ func IntToString(nb int, n int) string {
 	for i := 1; i < n; i++ {
 		weight *= 10
 	}
-	for i2 := 0; i2 <= n ; i2++ {
+	for i2 := 0; i2 <= n; i2++ {
 		table[i2] = byte((nb/weight)%10 + '0')
 		if weight != 1 {
 			weight /= 10
