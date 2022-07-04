@@ -1,1 +1,0 @@
-find . -name '*.sh'   |sort -r  |rev| cut  -f1 --delimiter="/" |rev | sed 's/.sh//g'
