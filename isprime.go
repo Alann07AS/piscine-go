@@ -5,6 +5,8 @@ func IsPrime(nb int) bool {
 		return false
 	}
 	switch nb {
+	case 1:
+		return false
 	case 2:
 		return true
 	case 3:
