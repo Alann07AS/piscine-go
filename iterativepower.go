@@ -11,8 +11,5 @@ func IterativePower(nb, power int) int {
 		result *= nb
 		power--
 	}
-	if result < 0 {
-		return result * -1
-	}
 	return result
 }
