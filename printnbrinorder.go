@@ -5,8 +5,8 @@ import "github.com/01-edu/z01"
 func PrintNbrInOrder(n int) {
 	result := 0
 	weight := calcWeight(n)
-	var table [40]int
 	l := calcL(weight)
+	var table [40]int
 	for i := 0; i < l; i++ {
 		result = (n / weight) % 10
 		table[i] = result
