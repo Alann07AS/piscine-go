@@ -7,6 +7,9 @@ func Capitalize(s string) string {
 		if IsLower(string(tabble[i])) && !(IsAlpha(string(tabble[i-1]))) {
 			tempT := []rune(ToUpper(string(tabble[i])))
 			tabble[i] = tempT[0]
+		} else if IsUpper(string(tabble[i])) {
+			tempT := []rune(ToLower(string(tabble[i])))
+			tabble[i] = tempT[0]
 		}
 	}
 	return string(tabble)
