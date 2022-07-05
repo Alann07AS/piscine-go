@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"piscine"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
-	arg := 3
-	fmt.Println(piscine.IterativeFactorial(arg))
+	z01.PrintRune(piscine.FirstRune("♥"))
 }

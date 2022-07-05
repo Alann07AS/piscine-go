@@ -3,7 +3,7 @@ package piscine
 func Sqrt(nb int) int {
 	result := 0
 	x := 0
-	for result != nb && x <= result {
+	for result != nb && x <= nb {
 		x++
 		result = x * x
 	}
