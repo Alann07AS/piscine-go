@@ -1,6 +1,9 @@
 package piscine
 
 func Index(s string, toFind string) int {
+	if s == "" || toFind == "" {
+		return -1
+	}
 	tabbleS := []rune(s)
 	tabbleToFind := []rune(toFind)
 	lS := len(tabbleS) - 1
