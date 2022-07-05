@@ -7,9 +7,6 @@ func Index(s string, toFind string) int {
 	lF := len(tabbleToFind) - 1
 	isFind := true
 	result := 0
-	if s == "Z.p$-1RjI{'En" {
-		return 2
-	}
 	for i := 0; i <= lS; i++ {
 		if tabbleS[i] == tabbleToFind[0] {
 			for i2 := 0; i2 <= lF; i2++ {
@@ -26,5 +23,5 @@ func Index(s string, toFind string) int {
 	if result == 0 {
 		result = -1
 	}
-	return result
+	return result + 1
 }
