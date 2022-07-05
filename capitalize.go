@@ -3,8 +3,9 @@ package piscine
 func Capitalize(s string) string {
 	tabble := []rune(s)
 	iMax := len(tabble) - 1
-	if s == "krwd-i=~I'EX)" {
-		return "Krwd-I=~I'Ex)"
+	if IsLower(string(tabble[0])) {
+		tempT := []rune(ToUpper(string(tabble[0])))
+		tabble[0] = tempT[0]
 	}
 	for i := 1; i <= iMax; i++ {
 		if IsLower(string(tabble[i])) && !(IsAlpha(string(tabble[i-1]))) {
