@@ -14,13 +14,15 @@ func PrintNbrInOrder(n int) {
 	}
 	isModifie := true
 	for isModifie {
-		for i := l - 1; i >= 1; i-- {
-			isModifie = false
-			if table[i-1] > table[i] {
+		isModifie = false
+		for i := l - 1; i >= 0; i-- {
+			if i >= 1 && table[i-1] > table[i] {
 				table[39] = table[i]
 				table[i] = table[i-1]
 				table[i-1] = table[39]
 				isModifie = true
+				z01.PrintRune('S')
+				z01.PrintRune('\n')
 			}
 		}
 	}
