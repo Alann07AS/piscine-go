@@ -21,8 +21,6 @@ func PrintNbrInOrder(n int) {
 				table[i] = table[i-1]
 				table[i-1] = table[39]
 				isModifie = true
-				z01.PrintRune('S')
-				z01.PrintRune('\n')
 			}
 		}
 	}
