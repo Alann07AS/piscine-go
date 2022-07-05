@@ -1,6 +1,6 @@
 package piscine
 
 func FirstRune(s string) rune {
-	table := []byte(s)
+	table := []rune(s)
 	return rune(table[0])
 }
