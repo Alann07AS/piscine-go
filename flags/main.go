@@ -2,7 +2,6 @@ package main
 
 import (
 	"os"
-	"piscine"
 
 	"github.com/01-edu/z01"
 )
@@ -53,7 +52,7 @@ func main() {
 			}
 		}
 		sToConcat = string(table[firstCharPos : l+1])
-		argumentTable[argPos] = piscine.Concat(argumentTable[argPos], sToConcat)
+		argumentTable[argPos] = concatArgs(argumentTable[argPos], sToConcat)
 		if !isOrder {
 			printTxt(argumentTable[argPos])
 		}
@@ -79,6 +78,10 @@ func main() {
 		printTxt(argumentTable[argPos])
 	}
 	z01.PrintRune('\n')
+}
+
+func concatArgs(str1 string, str2 string) string {
+	return str1 + str2
 }
 
 func printHelp() {
