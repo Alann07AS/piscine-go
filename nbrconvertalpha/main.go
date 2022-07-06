@@ -20,7 +20,9 @@ func main() {
 			z01.PrintRune(' ')
 		}
 	}
-	z01.PrintRune('\n')
+	if len(s) != 1 {
+		z01.PrintRune('\n')
+	}
 }
 
 func IsLower(s string) bool {
