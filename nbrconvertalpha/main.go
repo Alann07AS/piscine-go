@@ -10,14 +10,39 @@ func main() {
 	s := os.Args
 	for i := 1; i <= len(s)-1; i++ {
 		ascii := string(rune(Atoi(s[i]) + 96))
+		if s[1] == "--upper" {
+			ascii = ToUpper(ascii)
+		}
 		leter := ascii[0]
 		if IsAlpha(ascii) {
 			z01.PrintRune(rune(leter))
-		} else {
+		} else if !(i == 1 && s[1] == "--upper") {
 			z01.PrintRune(' ')
 		}
 	}
 	z01.PrintRune('\n')
+}
+
+func IsLower(s string) bool {
+	tabble := []rune(s)
+	l := len(s) - 1
+	for i := 0; i <= l; i++ {
+		if !(tabble[i] >= 'a' && tabble[i] <= 'z') {
+			return false
+		}
+	}
+	return true
+}
+
+func ToUpper(s string) string {
+	tabble := []rune(s)
+	l := len(s) - 1
+	for i := 0; i <= l; i++ {
+		if IsLower(string(tabble[i])) {
+			tabble[i] -= 0x20
+		}
+	}
+	return string(tabble)
 }
 
 func Atoi(s string) int {
