@@ -87,11 +87,11 @@ func concatArgs(str1 string, str2 string) string {
 func printHelp() {
 	help := []string{
 		"--insert\n",
-		"  -i\n",
-		"    This flag inserts the string into the string passed as argument.\n",
+		"	i\n",
+		"		This flag inserts the string into the string passed as argument.\n",
 		"--order\n",
-		"  -o\n",
-		"    This flag will behave like a boolean, if it is called it will order the argument.\n",
+		"	-o\n",
+		"		This flag will behave like a boolean, if it is called it will order the argument.\n",
 	}
 	for _, txt := range help {
 		printTxt(txt)
