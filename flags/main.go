@@ -82,7 +82,7 @@ func main() {
 }
 
 func printHelp() {
-	var help = []string{
+	help := []string{
 		"--insert\n",
 		"  -i\n",
 		"    This flag inserts the string into the string passed as argument.\n",
