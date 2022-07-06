@@ -10,7 +10,9 @@ func main() {
 	s := os.Args
 	sTable := []rune(s[0])
 	for _, name := range sTable {
-		z01.PrintRune(name)
+		if name != '.' && name != '/' {
+			z01.PrintRune(name)
+		}
 	}
 	z01.PrintRune('\n')
 }
