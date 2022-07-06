@@ -8,7 +8,7 @@ import (
 
 func main() {
 	s := os.Args
-	for i := len(s) - 1; i >= 1; i++ {
+	for i := len(s) - 1; i >= 1; i-- {
 		sTable := []rune(s[i])
 		for _, name := range sTable {
 			z01.PrintRune(name)
