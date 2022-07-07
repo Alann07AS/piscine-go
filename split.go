@@ -21,7 +21,7 @@ func Split(s, sep string) []string {
 					}
 				}
 				if isSeparate {
-					sTable = append(sTable, string(table[indexD:i-1]))
+					sTable = append(sTable, string(table[indexD:i-len(tableSep)+1]))
 					indexD = i + 1
 					isSeparate = false
 				}
