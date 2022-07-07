@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 func Split(s, sep string) []string {
 	table := []rune(s)
 	tableSep := []rune(sep)
@@ -9,12 +7,10 @@ func Split(s, sep string) []string {
 	indexD := 0
 	l := len(table) - 1
 	isSeparate := false
-	fmt.Println("l = ", l)
 	for i := 0; i <= l; i++ {
 		if table[i] == tableSep[0] || i == l {
 			if i == l {
 				if i == l {
-					fmt.Println("i == l")
 					sTable = append(sTable, string(table[indexD:l+1]))
 				}
 			} else {
