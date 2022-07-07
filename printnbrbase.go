@@ -10,7 +10,7 @@ func PrintNbrBase(nbr int, base string) {
 	baseNb := len(baseTable) - 1
 	index := 0
 	isNeg := false
-	if !sortAndCheckBase(baseTable) {
+	if !sortAndCheckBase(baseTable) || baseNb <= 0 {
 		z01.PrintRune('N')
 		z01.PrintRune('V')
 		return
