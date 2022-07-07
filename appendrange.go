@@ -11,5 +11,4 @@ func AppendRange(min, max int) []int {
 		table[i-min] = i
 	}
 	return table
-
 }
