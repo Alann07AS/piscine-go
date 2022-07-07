@@ -1,14 +1,11 @@
 package piscine
 
-import "fmt"
-
 func SplitWhiteSpaces(s string) []string {
 	table := []rune(s)
 	var sTable []string
 	indexD := 0
 	l := len(table) - 1
 	for i := 0; i <= l; i++ {
-		fmt.Println(i)
 		ti := table[i]
 		if ti == ' ' || ti == '	' || ti == '\n' || i == l {
 			if string(table[indexD:i]) != "" {
