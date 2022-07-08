@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"piscine"
 )
 
 func main() {
-	fmt.Println(piscine.IsUpper("HELLO!"))
-	fmt.Println(piscine.IsUpper("HELqsd"))
+	piscine.PrintNbrBase(807990, "CHOUMIisDAcat!")
 }
