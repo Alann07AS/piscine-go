@@ -1,6 +1,8 @@
 package piscine
 
 import (
+	"fmt"
+
 	"github.com/01-edu/z01"
 )
 
@@ -21,7 +23,7 @@ func PrintNbrBase(nbr int, base string) {
 	}
 	for calc := 0; calc < nbr; calc++ {
 		intTbale = recursifBaseCalc(baseNb, index, intTbale)
-		// fmt.Println(intTbale) //Suprimer FMT !!!!!______________
+		fmt.Println(intTbale) //Suprimer FMT !!!!!______________
 	}
 	if isNeg {
 		z01.PrintRune('-')
