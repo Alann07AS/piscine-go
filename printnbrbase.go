@@ -62,7 +62,7 @@ func sortAndCheckBase(sBase []rune) bool {
 		}
 	}
 	for i := len(s) - 1; i >= 1; i-- {
-		if i >= 1 && s[i-1] == s[i] {
+		if i >= 1 && s[i-1] == s[i] || s[i-1] == '-' {
 			return false
 		}
 	}
