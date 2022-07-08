@@ -32,7 +32,6 @@ func main() {
 			z01.PrintRune(char)
 		}
 	}
-
 }
 
 func isFowel(r rune) bool {
