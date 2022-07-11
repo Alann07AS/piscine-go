@@ -9,14 +9,6 @@ import (
 
 func main() {
 	args := os.Args
-	if os.Stdin == nil {
-		bytes, _ := ioutil.ReadAll(os.Stdin)
-		if bytes != nil {
-			printStr(string(bytes))
-			return
-		}
-	}
-
 	for i := 1; i <= len(args)-1; i++ {
 		file, err := os.Open(args[i])
 		if err != nil {
@@ -32,6 +24,12 @@ func main() {
 		file.Read(contennet)
 		printStr(string(contennet))
 		file.Close()
+	}
+	stringIN, _ := ioutil.ReadAll(os.Stdin)
+	stat, _ := os.Stdin.Stat()
+	if (stat.Mode()&os.ModeCharDevice) == 0 && len(args) == 1 {
+		printStr(string(stringIN))
+		return
 	}
 }
 
