@@ -5,29 +5,38 @@ import (
 )
 
 func PrintNbrBase(nbr int, base string) {
-	baseTableBefore := []rune(base)
-	var intTbale []int
-	baseNb := len(baseTableBefore) - 1
-	index := 0
-	isNeg := false
-	if !sortAndCheckBase(baseTableBefore) || baseNb <= 0 {
-		z01.PrintRune('N')
-		z01.PrintRune('V')
-		return
+	isToo := 1
+	nbrNB := nbr
+	if nbr/10 > 0 {
+		isToo = 2
 	}
-	baseTable := []rune(base)
-	if nbr < 0 {
-		nbr *= -1
-		isNeg = true
-	}
-	for calc := 0; calc < nbr; calc++ {
-		intTbale = recursifBaseCalc(baseNb, index, intTbale)
-	}
-	if isNeg {
-		z01.PrintRune('-')
-	}
-	for i := len(intTbale) - 1; i >= 0; i-- {
-		z01.PrintRune(baseTable[intTbale[i]])
+	for isToo != 1 {
+		nbrNB = nbr / isToo
+		isToo--
+		baseTableBefore := []rune(base)
+		var intTbale []int
+		baseNb := len(baseTableBefore) - 1
+		index := 0
+		isNeg := false
+		if !sortAndCheckBase(baseTableBefore) || baseNb <= 0 {
+			z01.PrintRune('N')
+			z01.PrintRune('V')
+			return
+		}
+		baseTable := []rune(base)
+		if nbr < 0 {
+			nbr *= -1
+			isNeg = true
+		}
+		for calc := 0; calc < nbrNB; calc++ {
+			intTbale = recursifBaseCalc(baseNb, index, intTbale)
+		}
+		if isNeg {
+			z01.PrintRune('-')
+		}
+		for i := len(intTbale) - 1; i >= 0; i-- {
+			z01.PrintRune(baseTable[intTbale[i]])
+		}
 	}
 }
 
