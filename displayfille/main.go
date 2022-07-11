@@ -14,7 +14,6 @@ func main() {
 		fmt.Println("Too much arguents appear")
 		return
 	}
-
 	file, err := os.Open("quest8.txt")
 
 	if err != nil {
