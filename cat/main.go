@@ -9,16 +9,20 @@ import (
 
 func main() {
 	args := os.Args
-	bytes, err1 := ioutil.ReadAll(os.Stdin)
-	if err1 == nil {
-		printStr(string(bytes))
-		return
+	if os.Stdin == nil {
+		bytes, _ := ioutil.ReadAll(os.Stdin)
+		if bytes != nil {
+			printStr(string(bytes))
+			return
+		}
 	}
+
 	for i := 1; i <= len(args)-1; i++ {
 		file, err := os.Open(args[i])
 		if err != nil {
 			printStr("ERROR: ")
 			printStr(err.Error())
+			z01.PrintRune('\n')
 			os.Exit(1)
 			z01.PrintRune('\n')
 			return
