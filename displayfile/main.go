@@ -8,10 +8,10 @@ import (
 func main() {
 	args := os.Args
 	if len(args) < 2 {
-		fmt.Println("No arguents appear")
+		fmt.Println("File name missing")
 		return
 	} else if len(args) > 2 {
-		fmt.Println("Too much arguents appear")
+		fmt.Println("Too many arguments")
 		return
 	}
 	file, err := os.Open("quest8.txt")
