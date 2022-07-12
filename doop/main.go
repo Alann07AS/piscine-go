@@ -12,7 +12,7 @@ func main() {
 	for i := 1; i <= len(args)-1; i += 2 {
 		table := args[i]
 		for i2 := 0; i2 <= len(args[i])-1; i2++ {
-			if !(table[i2] <= '9' && table[i2] >= '0') && !(table[0] != '+' || table[0] != '-') {
+			if !(table[i2] <= '9' && table[i2] >= '0') && !(table[0] == '+' || table[0] == '-') {
 				return
 			}
 		}
