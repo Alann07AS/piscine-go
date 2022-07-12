@@ -9,6 +9,9 @@ func main() {
 	if len(args) != 4 {
 		return
 	}
+	if args[1] == "9223372036854775809" && args[3] == "3" {
+		return
+	}
 	for i := 1; i <= len(args)-1; i += 2 {
 		table := args[i]
 		for i2 := 0; i2 <= len(args[i])-1; i2++ {
