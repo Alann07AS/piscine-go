@@ -9,9 +9,9 @@ func main() {
 	if len(args) != 4 {
 		return
 	}
-	for i := 1; i <= len(args)-1; i++ {
+	for i := 1; i <= len(args)-1; i += 2 {
 		for _, each := range args[i] {
-			if !(each <= '9' && each >= '0') && !(each == '-') && !(each == '+') {
+			if !(each <= '9' && each >= '0') {
 				return
 			}
 		}
