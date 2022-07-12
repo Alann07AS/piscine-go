@@ -11,7 +11,7 @@ func main() {
 	}
 	for i := 1; i <= len(args)-1; i++ {
 		for _, each := range args[i] {
-			if !(each <= '9' && each >= '0') || each != '-' || each != '+' {
+			if !(each <= '9' && each >= '0') || !(each == '-') || !(each == '+') {
 				return
 			}
 		}
