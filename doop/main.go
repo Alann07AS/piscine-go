@@ -80,6 +80,11 @@ func Atoi(s string) int {
 }
 
 func intToString(nb int) string {
+	isNeg := false
+	if nb < 0 {
+		nb *= -1
+		isNeg = true
+	}
 	str := ""
 	l := 0
 	nbTemp := nb
@@ -95,5 +100,9 @@ func intToString(nb int) string {
 		str += string(rune(((nb / weight) % 10) + 48))
 		weight /= 10
 	}
-	return str
+	if isNeg {
+		return "-" + str
+	} else {
+		return str
+	}
 }
