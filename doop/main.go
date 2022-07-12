@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -14,7 +13,6 @@ func main() {
 		table := args[i]
 		for i2 := 0; i2 <= len(args[i])-1; i2++ {
 			if !(table[i2] <= '9' && table[i2] >= '0') && !(table[0] != '+' || table[0] != '-') {
-				fmt.Print("qsfsdf")
 				return
 			}
 		}
