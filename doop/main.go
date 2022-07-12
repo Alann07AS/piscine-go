@@ -24,18 +24,19 @@ func main() {
 		if args[3] != "0" {
 			result = Atoi(args[1]) / Atoi(args[3])
 		} else {
-			os.Stderr.WriteString("No division by 0")
+			os.Stderr.WriteString("No division by 0\n")
 			return
 		}
 	case "%":
 		if args[3] != "0" {
 			result = Atoi(args[1]) % Atoi(args[3])
 		} else {
-			os.Stderr.WriteString("No modulo by 0")
+			os.Stderr.WriteString("No modulo by 0\n")
 			return
 		}
 	}
 	os.Stderr.WriteString(intToString(result))
+	os.Stderr.WriteString("\n")
 }
 
 func Atoi(s string) int {
