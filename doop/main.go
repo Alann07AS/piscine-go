@@ -2,9 +2,6 @@ package main
 
 import (
 	"os"
-	"piscine"
-
-	"github.com/01-edu/z01"
 )
 
 func main() {
@@ -12,41 +9,34 @@ func main() {
 	if len(args) != 4 {
 		return
 	}
-	if int64(piscine.Atoi(args[1])) > 9223372036854775807 || int64(piscine.Atoi(args[3])) < -9223372036854775808 {
+	if int64(Atoi(args[1])) > 9223372036854775807 || int64(Atoi(args[3])) < -9223372036854775808 {
 		return
 	}
 	result := 0
 	switch args[2] {
 	case "*":
-		result = Atoi(args[1]) * piscine.Atoi(args[3])
+		result = Atoi(args[1]) * Atoi(args[3])
 	case "+":
-		result = Atoi(args[1]) + piscine.Atoi(args[3])
+		result = Atoi(args[1]) + Atoi(args[3])
 	case "-":
-		result = Atoi(args[1]) - piscine.Atoi(args[3])
+		result = Atoi(args[1]) - Atoi(args[3])
 	case "/":
 		if args[3] != "0" {
-			result = Atoi(args[1]) / piscine.Atoi(args[3])
+			result = Atoi(args[1]) / Atoi(args[3])
 		} else {
-			printStr("No division by 0")
+			println("No division by 0")
 			return
 		}
 	case "%":
 		if args[3] != "0" {
-			result = Atoi(args[1]) % piscine.Atoi(args[3])
+			result = Atoi(args[1]) % Atoi(args[3])
 		} else {
-			printStr("No modulo by 0")
+			println("No modulo by 0")
 			return
 		}
 	}
 
-	printStr(intToString(result))
-}
-
-func printStr(s string) {
-	for _, r := range s {
-		z01.PrintRune(r)
-	}
-	z01.PrintRune('\n')
+	println(intToString(result))
 }
 
 func Atoi(s string) int {
