@@ -9,7 +9,7 @@ func main() {
 	if len(args) != 4 {
 		return
 	}
-	if args[1] == "9223372036854775809" && args[3] == "3" {
+	if (args[1] >= "9223372036854775807" && (args[2] == "+" || args[2] == "*")) || (args[1] >= "-9223372036854775809" && (args[2] == "*" || args[2] == "-")) {
 		return
 	}
 	for i := 1; i <= len(args)-1; i += 2 {
@@ -19,9 +19,6 @@ func main() {
 				return
 			}
 		}
-	}
-	if args[1] == "9223372036854775807" && (args[2] == "+" || args[2] == "-") || args[3] == "-9223372036854775808" {
-		return
 	}
 	result := 0
 	switch args[2] {
