@@ -9,6 +9,13 @@ func main() {
 	if len(args) != 4 {
 		return
 	}
+	for i := 1; i <= len(args)-1; i++ {
+		for _, each := range args[i] {
+			if !(each <= '9' && each >= '0') || each != '-' || each != '+' {
+				return
+			}
+		}
+	}
 	if int64(Atoi(args[1])) > 9223372036854775807 || int64(Atoi(args[3])) < -9223372036854775808 {
 		return
 	}
@@ -34,6 +41,8 @@ func main() {
 			os.Stderr.WriteString("No modulo by 0\n")
 			return
 		}
+	default:
+		return
 	}
 	os.Stderr.WriteString(intToString(result))
 	os.Stderr.WriteString("\n")
