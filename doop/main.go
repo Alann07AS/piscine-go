@@ -91,10 +91,14 @@ func Atoi(s string) int {
 
 func intToString(nb int) string {
 	isNeg := false
+	if nb == 0 {
+		return "0"
+	}
 	if nb < 0 {
 		nb *= -1
 		isNeg = true
 	}
+
 	str := ""
 	l := 0
 	nbTemp := nb
