@@ -12,10 +12,13 @@ func main() {
 		if err != nil {
 			fmt.Println(err.Error())
 		} else {
-			fmt.Println("==> ", file.Name(), " <==")
+			fmt.Println("==>", file.Name(), "<==")
 			stat, _ := os.Stat(file.Name())
 			contennet := make([]byte, stat.Size())
 			lookAt := Atoi(args[2])
+			if int64(lookAt) > stat.Size() {
+				lookAt = int(stat.Size())
+			}
 			file.ReadAt(contennet, stat.Size()-int64(lookAt))
 			fmt.Println(string(contennet))
 		}
