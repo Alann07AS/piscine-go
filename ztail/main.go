@@ -14,7 +14,6 @@ func main() {
 			fmt.Println(err.Error())
 			er = true
 		} else {
-			fmt.Println()
 			fmt.Println("==>", file.Name(), "<==")
 			stat, _ := os.Stat(file.Name())
 			contennet := make([]byte, stat.Size())
@@ -37,6 +36,7 @@ func main() {
 					os.Exit(0)
 				}
 			}
+			fmt.Println()
 		}
 		file.Close()
 	}
