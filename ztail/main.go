@@ -32,15 +32,13 @@ func main() {
 				}
 			}
 			fmt.Println(string(newContennet))
-			if i == len(args)-1 {
-				if er {
-					os.Exit(1)
-				} else {
-					os.Exit(0)
-				}
-			}
 		}
 		file.Close()
+	}
+	if er {
+		os.Exit(1)
+	} else {
+		os.Exit(0)
 	}
 }
 
