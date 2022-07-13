@@ -12,14 +12,16 @@ func main() {
 		if err != nil {
 			fmt.Println(err.Error())
 		} else {
+			fmt.Println("==> ", file.Name(), " <==")
 			stat, _ := os.Stat(file.Name())
 			contennet := make([]byte, stat.Size())
 			lookAt := Atoi(args[2])
 			file.ReadAt(contennet, stat.Size()-int64(lookAt))
 			fmt.Println(string(contennet))
-			file.Close()
 		}
+		file.Close()
 	}
+	os.Exit(1)
 }
 
 func Atoi(s string) int {
