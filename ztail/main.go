@@ -20,6 +20,12 @@ func main() {
 				lookAt = int(stat.Size())
 			}
 			file.ReadAt(contennet, stat.Size()-int64(lookAt))
+			var newContennet []byte
+			for _, char := range contennet {
+				if char >= 32 {
+					newContennet = append(newContennet, char)
+				}
+			}
 			fmt.Println(string(contennet))
 		}
 		file.Close()
