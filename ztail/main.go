@@ -7,10 +7,12 @@ import (
 
 func main() {
 	args := os.Args
+	er := false
 	for i := 3; i <= len(args)-1; i++ {
 		file, err := os.Open(args[i])
 		if err != nil {
 			fmt.Println(err.Error())
+			er = true
 		} else {
 			fmt.Println()
 			fmt.Println("==>", file.Name(), "<==")
@@ -29,9 +31,12 @@ func main() {
 			}
 			fmt.Println(string(newContennet))
 			if i == len(args)-1 {
-				os.Exit(1)
+				if er {
+					os.Exit(1)
+				} else {
+					fmt.Println()
+				}
 			}
-			fmt.Println()
 		}
 		file.Close()
 	}
