@@ -11,8 +11,8 @@ func main() {
 		file, err := os.Open(args[i])
 		if err != nil {
 			fmt.Println(err.Error())
-			fmt.Println()
 		} else {
+			fmt.Println()
 			fmt.Println("==>", file.Name(), "<==")
 			stat, _ := os.Stat(file.Name())
 			contennet := make([]byte, stat.Size())
