@@ -26,7 +26,7 @@ func main() {
 					newContennet = append(newContennet, char)
 				}
 			}
-			fmt.Println(string(contennet))
+			fmt.Println(string(newContennet))
 		}
 		file.Close()
 	}
