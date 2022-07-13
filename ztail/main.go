@@ -14,7 +14,9 @@ func main() {
 			fmt.Println(err.Error())
 			er = true
 		} else {
-			fmt.Println()
+			if i != 3 {
+				fmt.Println()
+			}
 			fmt.Println("==>", file.Name(), "<==")
 			stat, _ := os.Stat(file.Name())
 			contennet := make([]byte, stat.Size())
