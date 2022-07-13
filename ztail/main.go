@@ -28,11 +28,13 @@ func main() {
 				}
 			}
 			fmt.Println(string(newContennet))
+			if i == len(args)-1 {
+				os.Exit(1)
+			}
 			fmt.Println()
 		}
 		file.Close()
 	}
-	os.Exit(1)
 }
 
 func Atoi(s string) int {
