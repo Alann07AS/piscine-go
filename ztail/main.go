@@ -28,6 +28,7 @@ func main() {
 				}
 			}
 			fmt.Println(string(newContennet))
+			fmt.Println()
 		}
 		file.Close()
 	}
