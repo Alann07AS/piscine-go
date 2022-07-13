@@ -34,7 +34,7 @@ func main() {
 				if er {
 					os.Exit(1)
 				} else {
-					fmt.Println()
+					os.Exit(0)
 				}
 			}
 		}
