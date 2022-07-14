@@ -29,7 +29,6 @@ func PrintNbrBase(nbr int, base string) {
 	for i := len(intTbale) - 1; i >= 0; i-- {
 		z01.PrintRune(baseTable[intTbale[i]])
 	}
-
 }
 
 func recursifBaseCalc(baseNb, index int, inTable []int) []int {
