@@ -22,8 +22,8 @@ func PrintCombN(n int) {
 			// fmt.Println("Is Last Comb")
 			break
 		}
-		if comb%10000000 == 3456789 {
-			comb += 10000000
+		if comb%1000000 == 3456789 {
+			comb += 1000000
 		} else {
 			comb++
 		}
