@@ -11,6 +11,7 @@ func main() {
 		switch args[i] {
 		case "01", "galaxy", "galaxy 01":
 			fmt.Println("Alert!!!")
+			break
 		}
 	}
 }
