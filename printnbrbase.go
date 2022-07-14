@@ -6,12 +6,12 @@ import (
 
 func PrintNbrBase(nbr int, base string) {
 	isToo := 1
-	nbrNB := nbr
+	// nbrNB := nbr
 	if nbr/10 > 0 {
 		isToo = 2
 	}
 	for isToo != 1 {
-		nbrNB = nbr / isToo
+		// nbrNB = nbr / isToo
 		isToo--
 		baseTableBefore := []rune(base)
 		var intTbale []int
@@ -28,7 +28,7 @@ func PrintNbrBase(nbr int, base string) {
 			nbr *= -1
 			isNeg = true
 		}
-		for calc := 0; calc < nbrNB; calc++ {
+		for calc := 0; calc < nbr; calc++ {
 			intTbale = recursifBaseCalc(baseNb, index, intTbale)
 		}
 		if isNeg {
