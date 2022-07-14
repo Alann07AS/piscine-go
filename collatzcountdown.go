@@ -3,7 +3,7 @@ package piscine
 func CollatzCountdown(start int) int {
 	nb := start
 	cmpteur := 0
-	if start == 0 {
+	if start <= 0 {
 		return -1
 	}
 	for nb != 1 {
