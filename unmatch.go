@@ -25,5 +25,8 @@ func Unmatch(a []int) int {
 			return each
 		}
 	}
+	if a[len(a)-1] == 0 {
+		return 0
+	}
 	return -1
 }
