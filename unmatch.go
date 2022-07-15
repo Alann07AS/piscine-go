@@ -16,6 +16,8 @@ func Unmatch(a []int) int {
 		if z == a[i+1] {
 			z = a[i+1]
 			a[i], a[i+1] = 0, 0
+		} else {
+			z = a[i+1]
 		}
 	}
 	for _, each := range a {
