@@ -1,7 +1,7 @@
 package piscine
 
 func ListAt(l *NodeL, pos int) *NodeL {
-	var it = l
+	it := l
 	i := 0
 	for i != pos {
 		if l.Next == nil {
