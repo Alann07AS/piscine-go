@@ -6,10 +6,10 @@ func ListAt(l *NodeL, pos int) *NodeL {
 	for l != nil {
 		it = l.Next
 		i++
+		l = l.Next
 		if i == pos {
 			break
 		}
-		l = l.Next
 	}
 	return it
 }
