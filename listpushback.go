@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 type NodeL struct {
 	Data interface{}
 	Next *NodeL
@@ -14,7 +12,6 @@ type List struct {
 
 func ListPushBack(l *List, data interface{}) {
 	n := &NodeL{Data: data}
-	fmt.Println(n)
 	if l.Head == nil {
 		l.Head = n
 	} else {
