@@ -11,7 +11,7 @@ type List struct {
 }
 
 func ListPushBack(l *List, data interface{}) {
-	n := &NodeL{Data: data}
+	n := &NodeL{Data: data, Next: nil}
 	if l.Head == nil {
 		l.Head = n
 	} else {

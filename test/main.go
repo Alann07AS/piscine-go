@@ -1,10 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"piscine"
 )
 
 func main() {
-	piscine.PrintNbrBase(-922337203, "0123456789")
-	// piscine.PrintNbrBase(6854775808, "0123456789")
+	root := &piscine.TreeNode{Data: "4"}
+	piscine.BTreeInsertData(root, "1")
+	piscine.BTreeInsertData(root, "7")
+	piscine.BTreeInsertData(root, "5")
+	piscine.BTreeApplyPostorder(root, fmt.Println)
+
 }
