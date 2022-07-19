@@ -14,7 +14,7 @@ func main() {
 		fmt.Println("Too many arguments")
 		return
 	}
-	file, err := os.Open("quest8.txt")	
+	file, err := os.Open("quest8.txt")
 	if err != nil {
 		fmt.Printf("the mistake is : %v\n", err.Error())
 	}
