@@ -1,10 +1,7 @@
 package piscine
 
-import "fmt"
-
 func BTreeSearchItem(root *TreeNode, elem string) *TreeNode {
 	if elem == root.Data {
-		fmt.Println(root.Data)
 		return root
 	}
 	if elem < root.Data {
