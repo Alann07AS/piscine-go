@@ -1,15 +1,18 @@
 package piscine
 
 func BTreeLevelCount(root *TreeNode) int {
-	return levelCnt(root, 0)
-}
+	var compL, compR int = 1, 1
 
-func levelCnt(root *TreeNode, comp int) int {
 	if root.Left != nil {
-		comp = levelCnt(root.Left, comp+1)
+		compL = BTreeLevelCount(root.Left) + 1
 	}
 	if root.Right != nil {
-		comp = levelCnt(root.Right, comp+1)
+		compR = BTreeLevelCount(root.Right) + 1
 	}
-	return comp
+
+	if compL > compR {
+		return compL
+	} else {
+		return compR
+	}
 }
