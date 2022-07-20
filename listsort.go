@@ -10,6 +10,9 @@ func ListSort(l *NodeI) *NodeI {
 	for isMod {
 		isMod = false
 		it := l
+		if it.Next == nil {
+			return l
+		}
 		for it.Next != nil {
 			if it.Data > it.Next.Data {
 				isMod = true
