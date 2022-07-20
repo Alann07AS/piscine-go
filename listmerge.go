@@ -1,7 +1,7 @@
 package piscine
 
 func ListMerge(l1 *List, l2 *List) {
-	if l2.Head == nil {
+	if l2 == nil || l1 == nil {
 		return
 	}
 	l1.Tail.Next = l2.Head
