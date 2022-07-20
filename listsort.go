@@ -6,13 +6,13 @@ type NodeI struct {
 }
 
 func ListSort(l *NodeI) *NodeI {
+	if l == nil {
+		return l
+	}
 	isMod := true
 	for isMod {
 		isMod = false
 		it := l
-		if it.Next == nil {
-			return l
-		}
 		for it.Next != nil {
 			if it.Data > it.Next.Data {
 				isMod = true
