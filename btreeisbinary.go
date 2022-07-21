@@ -1,28 +1,20 @@
 package piscine
 
 func BTreeIsBinary(root *TreeNode) bool {
-	var stat bool = true
-	if root.Left != nil {
-		if !(basicAtoi(root.Data) >= basicAtoi(root.Left.Data)) {
-			return false
-		} else {
-			stat = BTreeIsBinary(root.Left)
-		}
-	}
-	if root.Right != nil {
-		if !(basicAtoi(root.Data) < basicAtoi(root.Right.Data)) {
-			return false
-		} else {
-			stat = BTreeIsBinary(root.Right)
-		}
-	}
-	return stat
-}
+	condLeft := true
+	condRight := true
 
-func basicAtoi(s string) int {
-	newInt := 0
-	for _, each := range s {
-		newInt = newInt*10 + (int(each - '0'))
+	if root == nil {
+		return true
 	}
-	return newInt
+
+	if root.Left != nil {
+		condLeft = BTreeIsBinary(root.Left) && root.Data >= root.Left.Data
+	}
+
+	if root.Right != nil {
+		condRight = BTreeIsBinary(root.Right) && root.Data <= root.Right.Data
+	}
+
+	return condLeft && condRight
 }
